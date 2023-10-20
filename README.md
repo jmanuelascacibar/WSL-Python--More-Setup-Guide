@@ -7,7 +7,7 @@ The sessions are designed to be beginner-friendly and include various tips and t
 
 ## Table of Contents
 
- - [1: Basic Setup and Software Installation](files/1_basic_setup.md) 
+ - [1: Basic Setup and Software Installation](notes/1_basic_setup.md) 
 
 ## Useful Resources
 
