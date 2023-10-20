@@ -9,7 +9,7 @@ Follow these [steps](https://learn.microsoft.com/en-us/windows/wsl/install) and 
 When you type 'python' in the terminal and see a response similar to mine, it's a cause for concern. 
 This indicates that there's a Python version already installed on our Linux system (system Python).
 
-![](images/image1.png)
+![](/images/image1.png)
 
 `python3` refers to a Python version typically installed on Linux systems. It's crucial not to interfere with this specific installation. 
 To determine which version you're currently using, you can utilize the `which` command.
