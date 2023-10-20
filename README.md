@@ -14,6 +14,7 @@ The sessions are designed to be beginner-friendly and include various tips and t
 A lot of insights and details in these notes were inspired by Jeremy Howard’s series of live coding sessions from 2022. His explorations and practical demonstrations are invaluable. Check out his channel. It is highly recommended. 
 
 [Jeremy Howard’s YouTube Channel](https://www.youtube.com/@howardjeremyp)
+
 [Live Coding serie](https://www.youtube.com/playlist?list=PLfYUBJiXbdtSLBPJ1GMx-sQWf6iNhb8mM)
 
 ## Contributions
