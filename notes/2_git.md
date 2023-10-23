@@ -1,4 +1,5 @@
 In this note, we'll explore how to configure Git for a version control system on your computer and synchronize it with GitHub..
+
 ## User and email
 
 Before starting doing anything, , it's essential to let Git know your identity.
@@ -21,21 +22,21 @@ $ vim .gitconfig
 
 Git is a version control tool installed on your computer. To use it, simply type `git` into your terminal.
 
-![](images/note2/image1.png)
+![](/images/note2/image1.png)
 
 To clone a repository:
 
 1. Navigate to your GitHub repository.
 2. Click on the 'Code' button and copy the SSH link.
 
-![](images/note2/image2.png)
+![](/images/note2/image2.png)
 
 If you haven't configured Git on your computer, you might face permission issues when trying to clone using SSH. This arises because SSH relies on specific keys for authentication. While it's possible to clone someone else's repository using HTTPS, it's recommended to use SSH when you own the repository—it's more secure and convenient.
 
 SSH doesn't rely on passwords. Instead, it uses a private key (stored on your computer) and a corresponding public key (shared with GitHub). This ensures that while you can interact with GitHub, no one can access your computer using the keys.
 
 Generate your SSH keys:
-``
+
 ````
 $ ssh-keygen
 ````
@@ -55,15 +56,15 @@ Next, go to GitHub:
 2. Navigate to the 'SSH and GPG keys' section. ![](https://chat.openai.com/c/images/note2/image3.png)
 3. Click 'New SSH key', provide a title, and paste your public key.
 
-![](images/note2/image3.png)
+![](/images/note2/image3.png)
 
 Now, try cloning your repository again.
 
-![](images/note2/image4.png)
+![](/images/note2/image4.png)
 
 The repository is cloned!
 
-![](images/note2/image5.png)
+![](/images/note2/image5.png)
 ## Committing Changes to Git
 
 To contribute to Git, you'll need to commit your changes:
