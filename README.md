@@ -8,6 +8,7 @@ The sessions are designed to be beginner-friendly and include various tips and t
 ## Table of Contents
 
  - [1: Basic Setup and Software Installation](notes/1_basic_setup.md) 
+ - [2: Setting up Git and GitHub + TMUX](notes/2_git.md)
 
 ## Useful Resources
 
