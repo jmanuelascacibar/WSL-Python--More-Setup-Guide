@@ -18,6 +18,7 @@ While these notes are crafted to be beginner-friendly, they also serve as a valu
 
  - [1: Local Basic Setup and Software Installation](notes/1_basic_setup.md) 
  - [2: Local Git and GitHub set up + TMUX](notes/2_git.md)
+ - [3: Paperspace FastAI environment setup](notes/3_paperspace.md)
 
 ## Useful Resources
 
