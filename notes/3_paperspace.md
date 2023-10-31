@@ -1,24 +1,31 @@
-# Paperspace FastAi set up
+# Paperspace FastAi setup
 
 In this note, we'll explore how to set up a Paperspace machine. The allure of Paperspace lies in its ability to provide reasonably fast machines at an affordable price, offering an experience akin to using your personal computer. 
 
 Below are my instructions on setting up a configuration that symlinks to our persistent storage. This ensures we don't lose our configuration when starting a new session. Note: I'm using a pro account. 
 
-We are going to start creating a new project, followed by a notebook, that we'll populate it with fastai. 
+### Paperspace
 
+We are going to start creating a new project, followed by a notebook, that we'll populate it with fastai. 
 
 ![](/images/note3/image4.png)
 
 Choose the machine you prefer, and then click at the bottom of Jupyter Lab.
+
 ![](/images/note3/image4-1.png)
+
+### Persistent storage
 
 Paperspace incorporates the concept of persistent storage, represented by the directory named `/storage`. This directory houses your persistent storage and is ideal location for installing conda libraries. Any content saved in this directory is accessible across every notebook (server) you generate. Therefore, if you need consistent access to specific libraries across all your notebooks, place them in this directory. 
 
 The directory `/notebooks` also serve as persistent storage but it's specific to the individual notebook. If you delete a notebook it will delete its content. 
 
+### Pip install setup
+
 You can install new libraries using pip or conda. When using `pip install` libraries are place in `.local ` within our home directory. To ensure these libraries are available in subsequent sessions, we should relocate `.local` to persistent storage.
 
 We are going to create a directory `config` in the persistent storage and we are going to relocate `.local` there.
+
 ```
 mkdir config
 mv .local /storage/config/
@@ -55,6 +62,8 @@ Here:
 * The first `4` permits read access for the group.
 * The second `4` permits read access for all users. 
 
+### SSH Keys
+
 Having established the process above, you may be pondering the subsequent steps. A great progression would be replicating the process for `ssh keys` and the mamba installer. 
 
 Firstly, we need to create a directory to store our keys. Typically, these keys are stored in the home directory under a hidden `.ssh` folder: `mkdir .ssh`
@@ -72,12 +81,16 @@ For the public key, ensure it's readable and writable for the user but only read
 To verify that our configuration works, test it with: `ssh git@github.com`.
 
 You should receive a response like:
+
 ```
 "Hi jmanuelascacibar! You've successfully authenticated, but GitHub does not offer shell access."
 ```
+
 Lastly, relocate the `.ssh` directory to the storage folder and append the symlink instructions to the `pre-run.sh` script. 
 
 ![](/images/note3/image15.png)
+
+### `.gitconfig` setup
 
 To ensure integration with GitHub, it's essential to symlink the `.gitconfig` file. This enables your push changes to your GitHub account.
 
@@ -92,6 +105,7 @@ git config --global user.name 'username'
 After the above step a new `.gitconfig` file will appear in your home directory. This file ocntains your Git configuration settings. 
 
 Relocate the `.gitconfig` file to the persistent storage to safeguard your configurations.
+
 ```
 mv .gitconfig /storage/config/
 ```
@@ -105,15 +119,18 @@ ln -s /storage/config/.gitconfig .gitconfig
 
 Now, each time you initiate a new session, the symlink ensures you're always using your personalized Git configurations.
 
+### Mamba setup
 
 We'll frequently use mamba due to its advantage over Conda.  Fortunately, Paperspace has already integrated mamba into our server. However, it's crucial to remember that any libraries you install will be removed once the session ends. To retain our installations, we'll set up dedicated folder for mamba, install a fresh version mamba within this folder, transfer the folder to the storage directory, and then create a symlink back to the home directory. It's a familiar approach by now. Also, it's essential that the new mamba directory is included in our path. 
 
 Create a directory for Mamba. Much like we did with `.local`, let's set up a directory for mamba. 
+
 ```
 mkdir mamba
 ```
 
 Install a fresh version of Mamba in the directory we just created.
+
 ```
 mamba install -p ~/mamba mamba
 ```
@@ -133,6 +150,7 @@ mv mamba /storage/config/
 ```
 
 Update the `pre-run.sh` script to include a symlink to the new `mamba` directory.
+
 ![](/images/note3/image22.png)
 
 
