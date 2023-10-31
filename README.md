@@ -1,14 +1,23 @@
-# WSL-Python--&More-Setup-Guide
-A step-by-step guide on setting up Python and MORE on Windows using the Windows Subsystem for Linux.
+# Setting Up a Data Science Environment locally and on a Paperspace Server
 
-Welcome to this repository! Here, you'll find notes and guidelines for setting up and effectively using a development environment, primarily focused on the terminal, Python, and some essential tools and libraries.
+A Step-by-Step Guide on Setting Up a Data Science Environment locally and on a Paperspace Server.
 
-The sessions are designed to be beginner-friendly and include various tips and tricks to optimize the setup process.
+In the world of data science, having a robust and efficient development environment can be a game-changer. These notes aim to streamline the set up process for both local machines and Paperspace servers, ensuring you have the necessary tools and configurations to perform any project. 
+
+**What You'll Learn**:
+
+1. **Local Setup**: Harness the power of your local machine with the right configurations, understanding the nuances of terminal commands, Python settings, and essential libraries.
+2. **Paperspace Server Configuration**: Dive deep into setting up a virtual environment on Paperspace, a leading cloud computing platform. Learn how to link it seamlessly with tools like Git for a holistic development experience.
+3. **Optimization Tips**: Beyond just setting up, discover various hacks, tips, and tricks to speed up operations, automate repetitive tasks, and enhance your overall data science workflow.
+
+**For Whom?** 
+
+While these notes are crafted to be beginner-friendly, they also serve as a valuable resource for intermediate users looking to refine their setups. Whether you're just starting out in data science or looking to optimize your current environment, these notes are for you.
 
 ## Table of Contents
 
- - [1: Basic Setup and Software Installation](notes/1_basic_setup.md) 
- - [2: Setting up Git and GitHub + TMUX](notes/2_git.md)
+ - [1: Local Basic Setup and Software Installation](notes/1_basic_setup.md) 
+ - [2: Local Git and GitHub set up + TMUX](notes/2_git.md)
 
 ## Useful Resources
 
